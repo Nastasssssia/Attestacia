@@ -35,7 +35,7 @@ class Program
        string [] Filter(string[] strings)
        {
           int count = 0;
-          for(int i = 0; i < strings.Length)
+          for(int i = 0; i < strings.Length; i++)
           {
                if(strings[i].Length <= 3)
                {
@@ -44,7 +44,7 @@ class Program
           }
           string[] newArray = new string[count];
           int newIndex = 0 ;
-          for(int i = 0; i < newArray.Length; i++)
+          for(int i = 0; i < strings.Length; i++)
           {
                if(strings[i].Length <= 3)
                {
@@ -58,6 +58,8 @@ class Program
 
        int length = 6;
        string []array = InputArray(length);
+       string[] newArray = Filter(array);
+       PrintArray(newArray);
        
 
        
