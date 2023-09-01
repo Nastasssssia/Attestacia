@@ -32,8 +32,34 @@ class Program
 
        }
 
+       string [] Filter(string[] strings)
+       {
+          int count = 0;
+          for(int i = 0; i < strings.Length)
+          {
+               if(strings[i].Length <= 3)
+               {
+                    count++;
+               }
+          }
+          string[] newArray = new string[count];
+          int newIndex = 0 ;
+          for(int i = 0; i < newArray.Length; i++)
+          {
+               if(strings[i].Length <= 3)
+               {
+                    newArray[newIndex]=strings[i];
+                    newIndex++;
+               }
+          }
+          return newArray;
+
+       }
+
        int length = 6;
        string []array = InputArray(length);
-       PrintArray(array);
+       
+
+       
     }
 }
