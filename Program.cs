@@ -6,6 +6,12 @@ class Program
 {
     static void Main(string[] args)
     {
+       
+       int length = 5;
+       string []array = InputArray(length);
+       string[] newArray = Filter(array);
+       PrintArray(newArray);
+
        string Input(string text)
        {
           Console.Write(text);
@@ -56,12 +62,7 @@ class Program
 
        }
 
-       int length = 6;
-       string []array = InputArray(length);
-       string[] newArray = Filter(array);
-       PrintArray(newArray);
-       
-
+     
        
     }
 }
